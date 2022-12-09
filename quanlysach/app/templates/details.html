@@ -1,0 +1,30 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+<h2>Chi tiết sản phẩm</h2>
+
+<div class="row">
+    <div class="col-md-4 col-sm-6">
+        <img src="{{product.image}}" class="img-fluid" alt="{{product.name}}">
+    </div>
+    <div class="col-md-8 col-sm-6">
+        <h3>{{product.name}}</h3>
+        <br>
+        <p>Tác giả: {{product.author}}</p>
+        <p>NXB: {{product.publishing}}</p>
+        <p>Thể loại: {{product.category}}</p>
+        <p>{{"{:,.0f}".format(product.price)}} Đ</p>
+        <a href="#" class="btn btn-danger">Chọn mua</a>
+    </div>
+</div>
+<div style="padding: 40px;">
+    <p>Mã sản phẩm: {{product.id}}</p>
+    <p>Tác giả: {{product.author}}</p>
+    <p>Nhà cung cấp: {{product.publishing}}</p>
+    <p>Năm xuất bản: </p>
+    <p>Trọng lượng(g): </p>
+    <p>Số trang: </p>
+    <p>Kích thước: </p>
+    <p>Nội dung: {{product.description}}</p>
+</div>
+{% endblock %}

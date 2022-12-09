@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Tiểu thuyết"
+  },
+  {
+    "id": 2,
+    "name": "Truyện tranh"
+  },
+  {
+    "id": 3,
+    "name": "Light novel"
+  },
+  {
+    "id": 4,
+    "name": "Truyện dài"
+  }
+]

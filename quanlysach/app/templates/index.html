@@ -1,10 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'layout/base.html' %}
+
+{% block content%}
+{% if products %}
+<div class="row">
+    {%for p in products%}
+    <div class="col-md-3 col-sm-10" style="padding: 20px;">
+        <div class="card" >
+            <img class="card-img-top" src="{{p.image}}" alt="{{p.name}}">
+            <div class="card-body">
+                <h4 class="card-title">{{p.name}}</h4>
+                <p class="card-text">{{"{:,.0f}".format(p.price)}}Đ</p>
+                <a href="/products/{{p.id}}" class="btn btn-primary">Xem chi tiết</a>
+                <a href="#" class="btn btn-danger">Chọn mua</a>
+            </div>
+
+        </div>
+
+    </div>
+    {% endfor%}
+    {%else%}
+    <p>Không có sản phẩm bạn cần tìm. Hãy thử từ khóa khác</p>
+    {%endif%}
+</div>
+{% endblock%}
